@@ -1,0 +1,13 @@
+OrderID,Product,Category,Region,SaleAmount,SaleDate
+101,Laptop,Electronics,North,1250.00,2024-01-15
+102,Pen Set,Office Supplies,South,15.50,2024-01-20
+103,Office Chair,Furniture,East,180.75,2024-02-10
+104,Keyboard,Electronics,North,75.00,2024-02-22
+105,Notebook,Office Supplies,West,8.99,2024-03-05
+106,Desk,Furniture,North,320.50,2024-03-18
+107,Mouse,Electronics,South,25.00,2024-04-12
+108,Stapler,Office Supplies,East,12.25,2024-04-25
+109,Monitor,Electronics,North,350.00,2024-05-10
+110,Desk Lamp,Furniture,West,45.50,2024-05-20
+111,Printer Paper,Office Supplies,North,22.75,2024-06-01
+112,External HDD,Electronics,South,99.99,2024-06-15

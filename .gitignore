@@ -1,0 +1,14 @@
+# Python / FastAPI
+__pycache__/
+*.pyc
+venv/
+backend_fastapi/venv/
+backend_fastapi/.env
+.env
+
+# Streamlit
+.streamlit/
+
+# IDE / OS files
+.vscode/
+.DS_Store

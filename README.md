@@ -97,7 +97,6 @@ streamlit run app.py
 - “Which month had the highest total revenue?”  
 - “Show me average delivery time by category”  
 - “List all orders greater than $1000”  
-- “Are there outliers in the dataset?”
 
 ---
 

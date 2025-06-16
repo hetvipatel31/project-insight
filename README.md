@@ -36,7 +36,42 @@
 | Utilities    | dotenv, requests, CORS         |
 
 ---
+## 🔍 Approach & Bottlenecks
 
+### ✅ Approach
+
+- Built a **modular FastAPI backend** to parse various file types (CSV/XLSX via `pandas`, PDF via `pdfplumber`, and DOCX via `python-docx`).
+- Streamlit was chosen for its simplicity and **no-code feel**, making it accessible for non-technical users.
+- Used **Google Gemini API** for LLM-based interpretation of queries.
+- Designed the prompt logic to enable intelligent summarization, analysis, and filtering of datasets.
+
+### ⚠️ Bottlenecks & Resolutions
+
+- **🔄 Changing API Billing Policies**  
+  Initially used OpenAI API with beginner credits, but OpenAI shifted to requiring billing info.  
+  **Solution:** Switched to **Google Gemini**, which offered easier access via [MakerSuite](https://makersuite.google.com/app/apikey).
+
+- **🧪 Model Availability in Gemini**  
+  Not all Gemini models support the `generateContent` method.  
+  **Solution:** Use the `check_models.py` script to identify valid models (see below).
+  ## 📂 File: `check_models.py`
+
+This script helps you identify which Gemini models can be used for content generation:
+
+```python
+# check_models.py
+import google.generativeai as genai
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+
+print("Models available for generateContent:")
+for m in genai.list_models():
+    if 'generateContent' in m.supported_generation_methods:
+        print(m.name)
+```
 ## 🧪 How It Works
 
 1. Upload a data file (CSV, Excel, PDF, or Word) using the sidebar.  
